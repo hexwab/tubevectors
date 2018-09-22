@@ -8,7 +8,7 @@ totaly = scry+bordery*2
 linelen = totalx*8
 scr = $100
 scrstart = scr+borderx*8+bordery*linelen
-	;; 30*22*56 = 39600 cycles
+	;; 30*22*(56+4) = 39600 cycles
 screensize = (totalx*totaly*8)
 
 ORG	$100+screensize-$e0
@@ -111,3 +111,4 @@ NEXT
 
 SAVE "vectors", start, end
 INCLUDE "vectube.asm"
+PUTBASIC "rotate.bas","rotate"
